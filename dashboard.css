@@ -36,8 +36,9 @@ body{
 .home-page{
     flex: 4;
     background-color: #F4F5F8;
-    padding: 3.3rem 2rem 5rem 2rem;
+    padding: 3.3rem 2rem 0 2rem;
     margin-left: 16.5rem;
+    height: auto;
     display: block;
     /* position: relative; */
 }
@@ -70,8 +71,13 @@ body{
 }
 
 .log-out{
-    margin-top: 9rem;
+    margin-top: 8.6rem;
     color: #C02828;
+}
+a{
+    color: #C02828;
+    text-decoration: none;
+    /* width: max-content; */
 }
 .selected{
     /* padding-left: 1rem; */
@@ -110,6 +116,7 @@ body{
 .home-icons{
     word-spacing: 2rem;
     display: block;
+    cursor: pointer;
 }
 .home-icons img{
     border-radius: 40px;
@@ -120,7 +127,7 @@ body{
 }
 
 .details{
-    padding: 5rem 7rem 0;
+    padding: 5rem 7rem 3.7rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 7rem;
@@ -145,9 +152,10 @@ body{
     align-items: center;
 }
 .detail p{
-    /* background-color: #5200A8; */
     width: 8rem;
+    border-radius: 6px;
     text-align: center;
+    align-items: center;
     padding: 0.5rem 0;
     color: #FBFBFB;
     
@@ -193,10 +201,13 @@ tr th{
 }
 table{
     border-collapse: collapse;
-    width: 106.3%;
-    margin-left: -2rem;
+    width: 106.2%;
+    margin-left: -1.95rem;
     font-family: var(--lato);
     
+}
+.table{
+    padding-bottom: 3.94rem;
 }
 .user-grid{
     display: grid;
@@ -214,8 +225,16 @@ select , option{
     border-radius: 5px;
     margin-top: -0.2rem;
     align-items: center;
-    color: #808080;
+    color: #101010;
+    background-color: #F4F5F8;
     align-content: center;
+}
+
+#information{
+    font-size: 20px;
+    color: #101010;
+    font-weight: 700;
+    padding-left: 2rem;
 }
 .next{
     float: right;
@@ -238,6 +257,7 @@ select , option{
     font-size: 25px;
     border-radius: 5px;
     text-align: center;
+    cursor: pointer;
     background-color: #5200A8;
     
 }
@@ -254,7 +274,7 @@ select , option{
 
 
 .user-info{
-    height: 32rem;
+    height: auto;
     padding: 1.5rem 2rem 0;
     color: #101010;
     font-family: var(--lato);
@@ -295,6 +315,19 @@ select , option{
     font-size: 30px;
 }
 
+#addInfo{
+    padding: 1.5rem;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: var(--lato);
+    font-weight: 700;
+    border: none;
+    width: 30rem;
+    margin: 0.5rem 0 0 15rem;
+    background-color: #5200A8;
+    color: #FBFBFB;
+}
+
 .sort{
     /* text-align: end; */
     display: grid;
@@ -311,7 +344,7 @@ select , option{
     /* display: block; */
     /* flex: 0 */
     /* float:  ; */
-    height: 80%;
+    height: 100%;
     /* padding: 2rem 2rem 0 20rem; */
     background-color: #F4F5F8;
     font-family: var(--lato);
@@ -352,10 +385,39 @@ select , option{
     margin: 5rem 0 0 0;
 }
 
+.add-info{
+    position: fixed;
+    z-index: 6;
+    bottom: 0.8rem;
+    font-family: var(--lato);
+    font-size: 20px;
+    text-align: center;
+    color: #101010;
+    display: block;
+    padding: 0.5rem 1.1rem ;
+    width: 14rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.coin-type{
+    width: 14rem;
+    padding: 0.5rem 1.1rem ;
+    grid-gap: 0.6rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.coin-type:hover , .add-info:hover{
+    background-color: #bdbdbd;
+    box-shadow: 1px 2px 6px 1px grey;
+    
+}
+
 
 .crypto-details{
     font-size: 20px;
-    padding: 0 3rem 0 7rem;
+    padding: 0 3rem 3rem 7rem;
     font-weight: 400;
 
 }
@@ -366,7 +428,14 @@ select , option{
     padding: 3rem 5rem 3rem 0;
     align-items: center;
 }
+.bit-design{
+    background-color: #bdbdbd;
+    box-shadow: 1px 2px 6px 1px grey;
+}
+.bit-design p{
+    color: #101010;
 
+}
 .bar-code{
     margin: -2rem 0rem 0 17rem;
     position: relative;
@@ -398,7 +467,7 @@ select , option{
     border-radius: 45px;
     width: 3rem;
     top: 27rem;
-    right: 32.8rem;
+    margin-left:-7rem;
 }
 .change-add{
     position: absolute;
@@ -415,22 +484,30 @@ select , option{
 }
 
 .select-coin{
-    margin: 6rem 0 0 2rem;
+    margin: 6rem 0 auto 0rem;
     line-height: 3rem;
-    height: 53.5vh;
+    height: 65vh;
 }
 .coin-grid{
     display: grid;
-    grid-template-columns: 1fr 18fr;
+    grid-template-columns: 1fr 6fr;
+    width: max-content;
+    grid-gap: 1rem;
+    /* box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.116); */
     font-size: 20px;
+    padding: 0 0 0 1rem;
+    border-radius: 10px;
     font-weight: 400;
+    margin: 0 0 0 2rem;
+    cursor: pointer;
     color: #808080;
     align-items: center;
+    align-content: center;
 }
 
 
 
-.eth img, .bit img{
+.eth img, .bit img, .bit-image{
     width: 1.3rem;
 }
 
@@ -446,16 +523,16 @@ select , option{
 
 }
 
-.select-coin button{
+.select-coin button, .fundsss button{
     display: grid;
     grid-template-columns: 1fr 6fr;
     align-items: center;
     
-    grid-gap: 0rem;
+    grid-gap: 0.1rem;
     padding: 0.5rem 1.6rem 0.5rem 2rem;
     margin: 4rem 0 0 37rem;
     background-color: #5200A8;
-    width: 172px;
+    width: 190px;
     height: 64px;
     /* justify-content: center; */
     border-radius: 10px;
@@ -468,16 +545,24 @@ select , option{
     box-sizing: border-box;
 }
 
+.apple-pay img{
+    width: 1.5rem;
+    color: rgb(244, 245, 248);
+}
 
 
 
 
 
-
+.fundsss{
+    margin-bottom: 3rem;
+    height: 81.5vh;
+}
 
 
 .fund{
 line-height: 3rem;
+margin: 6rem 0 0rem 0rem;
 }
 
 
