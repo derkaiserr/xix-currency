@@ -35,7 +35,8 @@ home.addEventListener('click', function(){
     withdrawa.classList.add('hide')
     userDetails.classList.add('hide')
     fundsss.classList.add('hide')
-
+    userInfo.classList.add('hide')
+    
 })
 user.addEventListener('click', function(){
     user.classList.add('selected')
@@ -51,6 +52,7 @@ user.addEventListener('click', function(){
     cryptoDetails.classList.add('hide')
     cryptocurrencies.classList.add('hide')
     fundsss.classList.add('hide')
+    userInfo.classList.add('hide')
     
 })
 
@@ -74,7 +76,8 @@ withdraw.addEventListener('click', function(){
     fundsss.classList.add('hide')
     cryptoDetails.classList.add('hide')
     cryptocurrencies.classList.add('hide')
-
+    userInfo.classList.add('hide')
+    
 })
 crypto.addEventListener('click', function(){
     home.classList.remove('selected')
@@ -90,6 +93,7 @@ crypto.addEventListener('click', function(){
     cryptoDetails.classList.remove('hide')
     cryptocurrencies.classList.remove('hide')
     fundsss.classList.add('hide')
+    userInfo.classList.add('hide')
     
 })
 coinType.addEventListener('click', function(){
@@ -99,7 +103,8 @@ coinType.addEventListener('click', function(){
     cryptoDetails.classList.add('hide')
     userDetails.classList.add('hide')
     fundsss.classList.add('hide')
-
+    userInfo.classList.add('hide')
+    
 })
 
 funds.addEventListener('click', function(){
@@ -116,6 +121,7 @@ funds.addEventListener('click', function(){
     cryptoDetails.classList.remove('hide')
     fundsss.classList.remove('hide')
     cryptocurrencies.classList.add('hide')
+    userInfo.classList.add('hide')
     
 })
 
