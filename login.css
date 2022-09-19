@@ -112,11 +112,14 @@ header{
     top: 24.6rem;
     /* right: 29.5vw; */
     /* right:calc(30rem-20px); */
-    margin-left: 34.3rem;
+    margin-left: 34.4rem;
     font-size: 25px;
     cursor: pointer;
     position: fixed;
     color: #808080;
+}
+.eyye{
+    margin-left: 34.5rem;
 }
 
 .eye2{
@@ -129,6 +132,7 @@ header{
 }
 #password{
     position: relative;
+    padding-right: 4rem;
 }
 
 

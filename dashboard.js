@@ -1,4 +1,27 @@
 let home = document.querySelector('.home')
+
+
+
+
+let dash = document.querySelector('.dash')
+let use = document.querySelector('.us')
+let withd = document.querySelector('.wid')
+let cryp = document.querySelector('.cry')
+let fun = document.querySelector('.fun')
+let addInf = document.querySelector('.inf')
+let btc = document.querySelector('.btc')
+let ethereum = document.querySelector('.ethe')
+let binCoin = document.querySelector('.bnc')
+let liteC = document.querySelector('.ltc')
+let zel = document.querySelector('.zel')
+let payp = document.querySelector('.payp')
+let cash = document.querySelector('.cap')
+let apple = document.querySelector('.app')
+
+
+
+
+
 let user = document.querySelector('.user')
 let transaction = document.querySelector('.transaction')
 let withdraw = document.querySelector('.withdraw')
@@ -44,7 +67,46 @@ let zelleOpt = document.querySelector('.zelle')
 let payOpt = document.querySelector('.paypal')
 let cashOpt = document.querySelector('.cashapp')
 let appleOpt = document.querySelector('.apple-pay')
+let searchResult = document.querySelector('.keywords')
+let keywords = document.getElementsByClassName('keyword')
+let input = document.getElementById('home-search')
 
+
+
+input.addEventListener('keyup', function(){
+    for(i = 0; i < keywords.length; i++){
+
+        let key = keywords[i].innerHTML.toUpperCase()
+        if(key.includes(input.value.toUpperCase()) && input.value != ''){
+            keywords[i].style.display = 'block'
+            searchResult.style.display = 'block'
+        }else{
+            keywords[i].style.display = 'none'
+        }
+    }
+})
+searchResult.addEventListener('click', function(){
+    searchResult.style.display = 'none'
+})
+
+
+dash.addEventListener('click', function(){
+    home.classList.add('selected')
+    user.classList.remove('selected')
+    // transaction.classList.remove('selected')
+    withdraw.classList.remove('selected')
+    crypto.classList.remove('selected')
+    funds.classList.remove('selected')
+    // giftCard.classList.remove('selected')
+    dashboard.classList.remove('hide')
+    cryptoDetails.classList.add('hide')
+    cryptocurrencies.classList.add('hide')
+    withdrawa.classList.add('hide')
+    userDetails.classList.add('hide')
+    fundsss.classList.add('hide')
+    userInfo.classList.add('hide')
+    title.textContent = 'xixcurrency - Dashboard' 
+})
 home.addEventListener('click', function(){
     home.classList.add('selected')
     user.classList.remove('selected')
@@ -61,6 +123,22 @@ home.addEventListener('click', function(){
     fundsss.classList.add('hide')
     userInfo.classList.add('hide')
     title.textContent = 'xixcurrency - Dashboard' 
+})
+use.addEventListener('click', function(){
+    user.classList.add('selected')
+    home.classList.remove('selected')
+    withdraw.classList.remove('selected')
+    crypto.classList.remove('selected')
+    funds.classList.remove('selected')
+    dashboard.classList.add('hide')
+    withdrawa.classList.add('hide')
+    userDetails.classList.remove('hide')
+    cryptoDetails.classList.add('hide')
+    cryptocurrencies.classList.add('hide')
+    fundsss.classList.add('hide')
+    userInfo.classList.add('hide')
+    title.textContent = 'xixcurrency - User' 
+    
 })
 user.addEventListener('click', function(){
     user.classList.add('selected')
@@ -79,12 +157,32 @@ user.addEventListener('click', function(){
     
 })
 
+addInf.addEventListener('click', function(){
+    userDetails.classList.add('hide')
+    userInfo.classList.remove('hide')
+    
+})
 addInfo.addEventListener('click', function(){
     userDetails.classList.add('hide')
     userInfo.classList.remove('hide')
     
 })
 
+withd.addEventListener('click', function(){
+    user.classList.remove('selected')
+    home.classList.remove('selected')
+    withdraw.classList.add('selected')
+    crypto.classList.remove('selected')
+    funds.classList.remove('selected')
+    dashboard.classList.add('hide')
+    withdrawa.classList.remove('hide')
+    userDetails.classList.add('hide')
+    fundsss.classList.add('hide')
+    cryptoDetails.classList.add('hide')
+    cryptocurrencies.classList.add('hide')
+    userInfo.classList.add('hide')
+    title.textContent = 'xixcurrency - Withdraw' 
+})
 withdraw.addEventListener('click', function(){
     user.classList.remove('selected')
     home.classList.remove('selected')
@@ -99,6 +197,36 @@ withdraw.addEventListener('click', function(){
     cryptocurrencies.classList.add('hide')
     userInfo.classList.add('hide')
     title.textContent = 'xixcurrency - Withdraw' 
+})
+cryp.addEventListener('click', function(){
+    home.classList.remove('selected')
+    user.classList.remove('selected')
+    withdraw.classList.remove('selected')
+    crypto.classList.add('selected')
+    funds.classList.remove('selected')
+    dashboard.classList.add('hide')
+    withdrawa.classList.add('hide')
+    userDetails.classList.add('hide')
+    cryptoDetails.classList.remove('hide')
+    cryptocurrencies.classList.remove('hide')
+    fundsss.classList.add('hide')
+    userInfo.classList.add('hide')
+    coinType.classList.remove('hide')
+    selectCoin.classList.add('hide')
+    title.textContent = 'xixcurrency - Crypto'
+    bitCoin.classList.add('hide')
+    ethCoin.classList.add('hide')
+    binanceCoin.classList.add('hide')
+    liteCoin.classList.add('hide')
+    barBitImage.classList.add('hide')
+    barEthImage.classList.add('hide')
+    barBinanceImage.classList.add('hide')
+    barLiteImage.classList.add('hide')
+    eth.classList.remove('bit-design')
+    bit.classList.remove('bit-design')
+    binance.classList.remove('bit-design')
+    lite.classList.remove('bit-design')
+    
 })
 crypto.addEventListener('click', function(){
     home.classList.remove('selected')
